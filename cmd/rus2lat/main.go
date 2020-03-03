@@ -207,7 +207,7 @@ func main() {
 	help := flag.Bool("h", false, "Print help and exit")
 
 	var printUsage = func() {
-		fmt.Fprintln(os.Stderr, "Transliteration from Cyrillic to Latin script.")
+		fmt.Fprintln(os.Stderr, "Transliteration from Russian to Latin script.")
 		fmt.Fprintln(os.Stderr)
 		fmt.Fprintln(os.Stderr, "Usage:")
 		fmt.Fprintln(os.Stderr, cmdname+" <input file(s)>")
