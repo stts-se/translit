@@ -1,6 +1,8 @@
 # translit
 
-A library of utilities for transliterating non-Latin scripts into Latin (and reverse, where applicable).
+A collection of utilities for transliterating non-Latin scripts into Latin (and reverse, where applicable).
+
+They are not synched in default behaviour, but that might happen 
 
 
 ## Arabic Buckwalter

@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path"
+	"path/filepath"
 	"strings"
 
 	tr "github.com/stts-se/translit"
@@ -21,14 +22,21 @@ func readStdinToString() (string, error) {
 	return string(b), nil
 }
 
+var echoInput *bool
+
 func main() {
+
+	cmdname := filepath.Base(os.Args[0])
+	//echoInput = flag.Bool("e", false, "Echo input (default: false)")
 
 	var verb = false
 	var tlit = tamil.NewTranslit()
 
 	if len(os.Args) == 2 && strings.HasPrefix(os.Args[1], "-h") {
-		fmt.Fprintf(os.Stderr, "Usage: translit <strings or files>\n")
-		fmt.Fprintf(os.Stderr, "   or: cat <files> | translit\n")
+		fmt.Fprintln(os.Stderr, "Transliteration from Tamil to Latin script.")
+		fmt.Fprintln(os.Stderr)
+		fmt.Fprintf(os.Stderr, "Usage: %s <strings or files>\n", cmdname)
+		fmt.Fprintf(os.Stderr, "   or: cat <files> | %s\n", cmdname)
 		os.Exit(0)
 	}
 

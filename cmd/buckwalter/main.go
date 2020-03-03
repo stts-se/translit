@@ -14,12 +14,29 @@ import (
 
 var reverse, echoInput, failOnError *bool
 
-func process(s string) (string, error) {
+func process(s string) {
 	s = tr.NFC(s)
+	var res string
+	var err error
 	if *reverse {
-		return buckwalter.Bw2Ar(s)
+		res, err = buckwalter.Bw2Ar(s)
+	} else {
+		res, err = buckwalter.Ar2Bw(s)
 	}
-	return buckwalter.Ar2Bw(s)
+	if err != nil {
+		if *failOnError {
+			log.Fatalf(fmt.Sprintf("%v", err))
+		} else {
+			fmt.Fprintf(os.Stderr, fmt.Sprintf("ERROR %s\t%v\n", s, err))
+			return
+
+		}
+	}
+	if *echoInput {
+		fmt.Printf("%s\t%s\n", s, res)
+	} else {
+		fmt.Printf("%s\n", res)
+	}
 }
 
 func main() {
