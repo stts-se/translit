@@ -5,30 +5,66 @@ A collection of utilities for transliterating non-Latin scripts into Latin (and 
 They are not synched in default behaviour, but that might happen 
 
 
-## Arabic Buckwalter
+## Installation
+
+1. Set up `go`
+
+     Download: https://golang.org/dl/ (1.13 or higher)   
+     Installation instructions: https://golang.org/doc/install             
+
+2. Clone the source code
+
+   `$ git clone https://github.com/stts-se/translit.git`  
+   `$ cd translit`   
+   
+3. Test (optional)
+
+   `translit$ go test ./...`
+
+
+4. Pre-compile binaries
+
+    `translit$ go install ./...`
+
+
+## Usage
+
+### Arabic Buckwalter
+
+ `translit$ buckwalter <arabic text>`
 
 References:
   * http://www.qamus.org/transliteration.htm
   * https://en.wikipedia.org/wiki/Buckwalter_transliteration
 
-## Farsi Buckwalter
+### Farsi Buckwalter
+
+ `translit$ far2lat <farsi text>`
+
+ NB! Work in progress, not tested!
 
 References:
   * https://en.wikipedia.org/wiki/Romanization_of_Persian
 
+### Greek to Latin
 
-## Greek to Latin
+ `translit$ grc2lat <greek text>`
+
 
 References:
    * https://en.wikipedia.org/wiki/Romanization_of_Greek#Modern_Greek
 
 
-## Cyrillic to Latin
+### Russian to Latin
+
+ `translit$ rus2lat <russian text>`
+
 
 References:
 * https://en.wikipedia.org/wiki/Romanization_of_Russian
 
-## Tamil to Latin
+### Tamil to Latin
+
+ `translit$ tamil2lat <tamil text>`
 
 
-## References
