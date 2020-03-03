@@ -2,7 +2,9 @@
 
 A collection of utilities for transliterating non-Latin scripts into Latin (and reverse, where applicable).
 
-They are not synched in default behaviour, but that might happen 
+They are not synched in default behaviour, but that might happen later on...
+
+Work in progress.
 
 
 ## Installation
@@ -67,4 +69,6 @@ References:
 
  `translit$ tamil2lat <tamil text>`
 
+Referenes:
+* https://en.wikipedia.org/wiki/Tamil_script
 
