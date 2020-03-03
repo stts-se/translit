@@ -70,7 +70,7 @@ var maptable = []pair{
 	{s1: "\u064F\u0648", s2: "u"},
 	{s1: "\u0650\u06CC", s2: "i"},
 	{s1: "\u064E\u0648", s2: "ow"},
-	{s1: "\u064E\u06CC", s2: "ey"}, //?? duplicate key
+	{s1: "\u064E\u06CC", s2: "ey"}, // ?? duplicate key
 	{s1: "\u064E\u06CC", s2: "–e"}, // ?? duplicate key
 	{s1: "\u06C0", s2: "–ye"},
 }
@@ -203,6 +203,7 @@ func main() {
 
 	var printUsage = func() {
 		fmt.Fprintln(os.Stderr, "Transliteration from Farsi to Latin script.")
+		fmt.Fprintln(os.Stderr, "WORK IN PROGRESS -- NOT TESTED!")
 		fmt.Fprintln(os.Stderr)
 		fmt.Fprintln(os.Stderr, "Usage:")
 		fmt.Fprintln(os.Stderr, cmdname+" <input file(s)>")
