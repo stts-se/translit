@@ -86,6 +86,7 @@ func Upcase(s string) string {
 	return strings.ToUpper(s)
 }
 
+// TODO: Better upcase initials functions (one function that returns a slice of strings with all case combinations)
 func UpcaseInitial(s string) string {
 	runes := []rune(s)
 	head := ""
@@ -99,7 +100,6 @@ func UpcaseInitial(s string) string {
 	return head + tail
 }
 
-// TODO: Better upcase functions
 func UpcaseTwoInitials(s string) string {
 	runes := []rune(s)
 	head := ""
