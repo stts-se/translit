@@ -81,3 +81,35 @@ func IsFile(fName string) bool {
 	}
 	return true
 }
+
+func Upcase(s string) string {
+	return strings.ToUpper(s)
+}
+
+func UpcaseInitial(s string) string {
+	runes := []rune(s)
+	head := ""
+	if len(runes) > 0 {
+		head = strings.ToUpper(string(runes[0]))
+	}
+	tail := ""
+	if len(runes) > 0 {
+		tail = strings.ToLower(string(runes[1:]))
+	}
+	return head + tail
+}
+
+// TODO: Better upcase functions
+func UpcaseTwoInitials(s string) string {
+	runes := []rune(s)
+	head := ""
+	if len(runes) > 0 {
+		head = strings.ToUpper(string(runes[0:2]))
+	}
+	tail := ""
+	if len(runes) > 2 {
+		tail = strings.ToLower(string(runes[2:]))
+	}
+	//fmt.Println("??? 3", len(runes), s, head, tail)
+	return head + tail
+}

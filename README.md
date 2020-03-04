@@ -2,7 +2,7 @@
 
 A collection of utilities for transliterating non-Latin scripts into Latin (and reverse, where applicable).
 
-They are not synched in default behaviour, but that might happen later on...
+They are not synched in default behaviour, but that might happen later on.
 
 Work in progress.
 
@@ -39,16 +39,20 @@ References:
   * http://www.qamus.org/transliteration.htm
   * https://en.wikipedia.org/wiki/Buckwalter_transliteration
 
-### Farsi Buckwalter
+### Farsi
+
+EI (2012)
 
  `translit$ far2lat <farsi text>`
 
- NB! Work in progress, not tested!
+ NB! Work in progress!
 
 References:
   * https://en.wikipedia.org/wiki/Romanization_of_Persian
 
 ### Greek to Latin
+
+Simplified version of ALA-LC [3]
 
  `translit$ grc2lat <greek text>`
 
@@ -59,11 +63,16 @@ References:
 
 ### Russian to Latin
 
+A simplified version of the Road signs system
+
+For Swedish style transliteration, we are using a simplified version TT's recommendations (link below).
+
  `translit$ rus2lat <russian text>`
 
 
 References:
 * https://en.wikipedia.org/wiki/Romanization_of_Russian
+* https://tt.se/tt-spraket/ord-och-begrepp/internationellt/andra-sprak/ryska/
 
 ### Tamil to Latin
 
