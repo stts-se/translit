@@ -1,5 +1,8 @@
 # translit
 
+
+[![GoDoc](https://godoc.org/github.com/stts-se/translit?status.svg)](https://godoc.org/github.com/stts-se/translit) [![Go Report Card](https://goreportcard.com/badge/github.com/stts-se/translit)](https://goreportcard.com/report/github.com/stts-se/translit) [![Github actions workflow status](https://github.com/stts-se/translit/workflows/Go/badge.svg)](https://github.com/stts-se/translit/actions)
+
 A collection of utilities for transliterating non-Latin scripts into Latin (and reverse, where applicable).
 
 They are not synched in default behaviour, but that might happen later on.
