@@ -177,9 +177,8 @@ func bwPreNorm(s string) string {
 func postNormalise(outputName, s string) string {
 	if outputName == "bw" {
 		return bwPostNorm(s)
-	} else {
-		return arPostNorm(s)
 	}
+	return arPostNorm(s)
 }
 
 func preNormalise(outputName, s string) string {

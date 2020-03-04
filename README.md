@@ -45,8 +45,6 @@ EI (2012)
 
  `translit$ far2lat <farsi text>`
 
- NB! Work in progress!
-
 References:
   * https://en.wikipedia.org/wiki/Romanization_of_Persian
 

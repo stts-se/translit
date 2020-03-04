@@ -6,11 +6,14 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strings"
+	"unicode"
 
 	"golang.org/x/text/transform"
 	"golang.org/x/text/unicode/norm"
+	"golang.org/x/text/unicode/runenames"
 )
 
 func ReadFile(fn string) ([]string, error) {
@@ -112,4 +115,62 @@ func UpcaseTwoInitials(s string) string {
 	}
 	//fmt.Println("??? 3", len(runes), s, head, tail)
 	return head + tail
+}
+
+// Unicode info stuff
+
+func unicodeBlockFor(r rune) string {
+	for s, t := range unicode.Scripts {
+		if unicode.In(r, t) {
+			return s
+		}
+	}
+	return "<UNDEF>"
+}
+
+func codeFor(r rune) string {
+	uc := fmt.Sprintf("%U", r)
+	return fmt.Sprintf("\\u%s", uc[2:])
+}
+
+var ucNumberRe = regexp.MustCompile(`^(?:\\u|[uU][+])([a-fA-F0-9]{4})$`)
+
+const newline rune = '\n'
+
+var hardwiredUnicodeNames = map[rune]string{
+	newline: "NEWLINE",
+	'	': "TAB",
+}
+
+func unicodeNameFor(r rune) string {
+	if name, ok := hardwiredUnicodeNames[r]; ok {
+		return name
+	}
+	return runenames.Name(r)
+}
+
+func inhibitSpecialChar(r rune) bool {
+	_, ok := hardwiredUnicodeNames[r]
+	return ok
+}
+
+type UnicodeChar struct {
+	Char, Name, Code, Block string
+}
+
+func UnicodeInfo(s string) []UnicodeChar {
+	var res []UnicodeChar
+	for _, r := range []rune(s) {
+		thisS := string(r)
+		if inhibitSpecialChar(r) {
+			thisS = ""
+		}
+		res = append(res, UnicodeChar{
+			Char:  thisS,
+			Name:  unicodeNameFor(r),
+			Code:  codeFor(r),
+			Block: unicodeBlockFor(r),
+		})
+	}
+	return res
 }

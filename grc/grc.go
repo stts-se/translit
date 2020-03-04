@@ -120,6 +120,7 @@ var commonChars = map[string]bool{
 }
 
 func Convert(s string) (string, error) {
+	s = tr.NFC(s)
 	for _, re := range mapRegexps {
 		s = re.from.ReplaceAllString(s, re.to)
 	}

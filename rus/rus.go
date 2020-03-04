@@ -109,6 +109,7 @@ var sweREs = []rPair{ // https://tt.se/tt-spraket/ord-och-begrepp/internationell
 }
 
 func (translit Translit) Convert(s string) (string, error) {
+	s = tr.NFC(s)
 	intAll := []pair{}
 	for _, p := range international {
 		intAll = append(intAll, p)
