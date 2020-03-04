@@ -85,11 +85,12 @@ func IsFile(fName string) bool {
 	return true
 }
 
+// Upcase string
 func Upcase(s string) string {
 	return strings.ToUpper(s)
 }
 
-// TODO: Better upcase initials functions (one function that returns a slice of strings with all case combinations)
+// UpcaseInitial upcase first character, downcase the rest
 func UpcaseInitial(s string) string {
 	runes := []rune(s)
 	head := ""
@@ -103,18 +104,39 @@ func UpcaseInitial(s string) string {
 	return head + tail
 }
 
-func UpcaseTwoInitials(s string) string {
+// func UpcaseTwoInitials(s string) string {
+// 	runes := []rune(s)
+// 	head := ""
+// 	if len(runes) > 0 {
+// 		head = strings.ToUpper(string(runes[0:2]))
+// 	}
+// 	tail := ""
+// 	if len(runes) > 2 {
+// 		tail = strings.ToLower(string(runes[2:]))
+// 	}
+// 	//fmt.Println("??? 3", len(runes), s, head, tail)
+// 	return head + tail
+// }
+
+// UpcaseInitials generate all variations upcasing a first group of characters, downcasing the rest
+func UpcaseInitials(s string) []string {
+	var res []string
+
 	runes := []rune(s)
-	head := ""
-	if len(runes) > 0 {
-		head = strings.ToUpper(string(runes[0:2]))
+	len := len(runes)
+	if len == 0 {
+		return []string{s}
 	}
-	tail := ""
-	if len(runes) > 2 {
-		tail = strings.ToLower(string(runes[2:]))
+	if len == 1 {
+		return []string{UpcaseInitial(s)}
 	}
-	//fmt.Println("??? 3", len(runes), s, head, tail)
-	return head + tail
+
+	for i := 1; i < len; i++ {
+		head := strings.ToUpper(string(runes[0:i]))
+		tail := strings.ToLower(string(runes[i:]))
+		res = append(res, head+tail)
+	}
+	return res
 }
 
 // Unicode info stuff

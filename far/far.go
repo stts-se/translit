@@ -96,11 +96,18 @@ func Convert(s string) (string, error) {
 	intAll := []pair{}
 	for _, p := range maptable {
 		intAll = append(intAll, p)
-		intAll = append(intAll, pair{s1: tr.UpcaseInitial(p.s1), s2: tr.UpcaseInitial(p.s2)})
-		intAll = append(intAll, pair{s1: tr.Upcase(p.s1), s2: tr.Upcase(p.s2)})
-		if len([]rune(p.s1)) > 2 {
-			intAll = append(intAll, pair{s1: tr.UpcaseTwoInitials(p.s1), s2: tr.UpcaseInitial(p.s2)})
+		for _, case1 := range tr.UpcaseInitials(p.s1) {
+			for _, case2 := range tr.UpcaseInitials(p.s2) {
+				intAll = append(intAll, pair{s1: case1, s2: case2})
+			}
 		}
+
+		// intAll = append(intAll, p)
+		// intAll = append(intAll, pair{s1: tr.UpcaseInitial(p.s1), s2: tr.UpcaseInitial(p.s2)})
+		// intAll = append(intAll, pair{s1: tr.Upcase(p.s1), s2: tr.Upcase(p.s2)})
+		// if len([]rune(p.s1)) > 2 {
+		// 	intAll = append(intAll, pair{s1: tr.UpcaseTwoInitials(p.s1), s2: tr.UpcaseInitial(p.s2)})
+		// }
 	}
 	res, err := innerConvert(intAll, s, true)
 	if err != nil {
