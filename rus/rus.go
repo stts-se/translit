@@ -32,39 +32,39 @@ func NewTranslit(swedishOutput bool) Translit {
 }
 
 var roadSigns = []pair{ // https://en.wikipedia.org/wiki/Romanization_of_Russian -- Road signs
-	pair{s1: "а", s2: "a"},
-	pair{s1: "б", s2: "b"},
-	pair{s1: "в", s2: "v"},
-	pair{s1: "г", s2: "g"},
-	pair{s1: "д", s2: "d"},
-	pair{s1: "е", s2: "e"},
-	pair{s1: "ё", s2: "e"},
-	pair{s1: "ж", s2: "zh"},
-	pair{s1: "з", s2: "z"},
-	pair{s1: "и", s2: "i"},
-	pair{s1: "й", s2: "y"}, // j
-	pair{s1: "к", s2: "k"},
-	pair{s1: "л", s2: "l"},
-	pair{s1: "м", s2: "m"},
-	pair{s1: "н", s2: "n"},
-	pair{s1: "о", s2: "o"},
-	pair{s1: "п", s2: "p"},
-	pair{s1: "р", s2: "r"},
-	pair{s1: "с", s2: "s"},
-	pair{s1: "т", s2: "t"},
-	pair{s1: "у", s2: "u"},
-	pair{s1: "ф", s2: "f"},
-	pair{s1: "х", s2: "kh"},
-	pair{s1: "ц", s2: "ts"},
-	pair{s1: "ч", s2: "ch"},
-	pair{s1: "ш", s2: "sh"},
-	pair{s1: "щ", s2: "shch"},
-	pair{s1: "ъ", s2: "ie"}, // ’
-	pair{s1: "ы", s2: "y"},
-	pair{s1: "ь", s2: "’"},
-	pair{s1: "э", s2: "e"},
-	pair{s1: "ю", s2: "yu"}, // ju
-	pair{s1: "я", s2: "ya"}, // ja
+	{s1: "а", s2: "a"},
+	{s1: "б", s2: "b"},
+	{s1: "в", s2: "v"},
+	{s1: "г", s2: "g"},
+	{s1: "д", s2: "d"},
+	{s1: "е", s2: "e"},
+	{s1: "ё", s2: "e"},
+	{s1: "ж", s2: "zh"},
+	{s1: "з", s2: "z"},
+	{s1: "и", s2: "i"},
+	{s1: "й", s2: "y"}, // j
+	{s1: "к", s2: "k"},
+	{s1: "л", s2: "l"},
+	{s1: "м", s2: "m"},
+	{s1: "н", s2: "n"},
+	{s1: "о", s2: "o"},
+	{s1: "п", s2: "p"},
+	{s1: "р", s2: "r"},
+	{s1: "с", s2: "s"},
+	{s1: "т", s2: "t"},
+	{s1: "у", s2: "u"},
+	{s1: "ф", s2: "f"},
+	{s1: "х", s2: "kh"},
+	{s1: "ц", s2: "ts"},
+	{s1: "ч", s2: "ch"},
+	{s1: "ш", s2: "sh"},
+	{s1: "щ", s2: "shch"},
+	{s1: "ъ", s2: "ie"}, // ’
+	{s1: "ы", s2: "y"},
+	{s1: "ь", s2: "’"},
+	{s1: "э", s2: "e"},
+	{s1: "ю", s2: "yu"}, // ju
+	{s1: "я", s2: "ya"}, // ja
 }
 
 var international = roadSigns
@@ -83,14 +83,14 @@ var commonChars = map[string]bool{
 
 // https://tt.se/tt-spraket/ord-och-begrepp/internationellt/andra-sprak/ryska/
 var swePairs = []pair{
-	pair{s1: "zh", s2: "zj"},
-	pair{s1: "kh", s2: "ch"},
-	pair{s1: "ch", s2: "tj"},
-	pair{s1: "sh", s2: "sj"},
+	{s1: "zh", s2: "zj"},
+	{s1: "kh", s2: "ch"},
+	{s1: "ch", s2: "tj"},
+	{s1: "sh", s2: "sj"},
 	//pair{s1: "shch", s2: "sjtj"}, // not needed
-	pair{s1: "yu", s2: "ju"},
-	pair{s1: "ya", s2: "ja"},
-	pair{s1: "ye", s2: "je"}, // ?? will this ever happen?
+	{s1: "yu", s2: "ju"},
+	{s1: "ya", s2: "ja"},
+	{s1: "ye", s2: "je"}, // ?? will this ever happen?
 }
 
 var sweREs = []rPair{ // https://tt.se/tt-spraket/ord-och-begrepp/internationellt/andra-sprak/ryska/
@@ -101,11 +101,11 @@ var sweREs = []rPair{ // https://tt.se/tt-spraket/ord-och-begrepp/internationell
 	// rPair{from: regexp.MustCompile(`(?:i)ov([\p{P}]|$)`), to: "ov$1"},
 	// rPair{from: regexp.MustCompile(`(?:i)ev([\p{P}]|$)`), to: "jov$1"}, // Gorbatjov
 
-	rPair{from: regexp.MustCompile(`(?i)ky(\b|$)`), to: "kij$2"},
-	rPair{from: regexp.MustCompile(`(?i)gy(\b|$)`), to: "gij$2"},
-	rPair{from: regexp.MustCompile(`(?i)ay(\b|$)`), to: "aj$2"},
-	rPair{from: regexp.MustCompile(`(?i)ey(\b|$)`), to: "ej$2"},
-	rPair{from: regexp.MustCompile(`(?i)y(\b|$)`), to: "yj$2"},
+	{from: regexp.MustCompile(`(?i)ky(\b|$)`), to: "kij$2"},
+	{from: regexp.MustCompile(`(?i)gy(\b|$)`), to: "gij$2"},
+	{from: regexp.MustCompile(`(?i)ay(\b|$)`), to: "aj$2"},
+	{from: regexp.MustCompile(`(?i)ey(\b|$)`), to: "ej$2"},
+	{from: regexp.MustCompile(`(?i)y(\b|$)`), to: "yj$2"},
 }
 
 func (translit Translit) Convert(s string) (string, error) {

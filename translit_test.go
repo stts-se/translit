@@ -43,19 +43,19 @@ func TestUpcaseInitial(t *testing.T) {
 
 func TestUpcaseInitials(t *testing.T) {
 	tests := map[string][]string{
-		"öiÆ": []string{
+		"öiÆ": {
 			"Öiæ",
 			"ÖIæ",
 		},
-		"öiÆx": []string{
+		"öiÆx": {
 			"Öiæx",
 			"ÖIæx",
 			"ÖIÆx",
 		},
-		"ö": []string{
+		"ö": {
 			"Ö",
 		},
-		"": []string{
+		"": {
 			"",
 		},
 	}

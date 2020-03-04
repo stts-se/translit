@@ -35,78 +35,78 @@ func (m maptable) name() string {
 
 var defaultChar = '?'
 var charset = []ch{
-	ch{'ا', 'A'}, // bare alif
-	ch{'ب', 'b'},
-	ch{'ت', 't'},
-	ch{'ث', 'v'},
-	ch{'ج', 'j'},
-	ch{'ح', 'H'},
-	ch{'خ', 'x'},
-	ch{'د', 'd'}, // dal \u062F
-	ch{'ذ', '*'},
-	ch{'ر', 'r'},
-	ch{'ز', 'z'},
-	ch{'س', 's'},
-	ch{'ش', '$'},
-	ch{'ص', 'S'},
-	ch{'ض', 'D'},
-	ch{'ط', 'T'},
-	ch{'ظ', 'Z'},
-	ch{'ع', 'E'},
-	ch{'غ', 'g'},
-	ch{'ف', 'f'},
-	ch{'ق', 'q'},
-	ch{'ك', 'k'},
-	ch{'ل', 'l'},
-	ch{'م', 'm'},
-	ch{'ن', 'n'},
-	ch{'ه', 'h'},
-	ch{'و', 'w'},
-	ch{'ي', 'y'},
-	ch{'ة', 'p'}, //teh marbuta
+	{'ا', 'A'}, // bare alif
+	{'ب', 'b'},
+	{'ت', 't'},
+	{'ث', 'v'},
+	{'ج', 'j'},
+	{'ح', 'H'},
+	{'خ', 'x'},
+	{'د', 'd'}, // dal \u062F
+	{'ذ', '*'},
+	{'ر', 'r'},
+	{'ز', 'z'},
+	{'س', 's'},
+	{'ش', '$'},
+	{'ص', 'S'},
+	{'ض', 'D'},
+	{'ط', 'T'},
+	{'ظ', 'Z'},
+	{'ع', 'E'},
+	{'غ', 'g'},
+	{'ف', 'f'},
+	{'ق', 'q'},
+	{'ك', 'k'},
+	{'ل', 'l'},
+	{'م', 'm'},
+	{'ن', 'n'},
+	{'ه', 'h'},
+	{'و', 'w'},
+	{'ي', 'y'},
+	{'ة', 'p'}, //teh marbuta
 
-	ch{'\u064E', 'a'}, // fatha
-	ch{'\u064f', 'u'}, // damma
-	ch{'\u0650', 'i'}, // kasra
-	ch{'\u064B', 'F'}, // fathatayn
-	ch{'\u064C', 'N'}, // dammatayn
-	ch{'\u064D', 'K'}, // kasratayn
-	ch{'\u0651', '~'}, // shadda
-	ch{'\u0652', 'o'}, // sukun
+	{'\u064E', 'a'}, // fatha
+	{'\u064f', 'u'}, // damma
+	{'\u0650', 'i'}, // kasra
+	{'\u064B', 'F'}, // fathatayn
+	{'\u064C', 'N'}, // dammatayn
+	{'\u064D', 'K'}, // kasratayn
+	{'\u0651', '~'}, // shadda
+	{'\u0652', 'o'}, // sukun
 
-	ch{'\u0621', '\''}, // lone hamza
-	ch{'\u0623', '>'},  // hamza on alif
-	ch{'\u0625', '<'},  // hamza below alif
-	ch{'\u0624', '&'},  // hamza on wa
-	ch{'\u0626', '}'},  // hamza on ya
+	{'\u0621', '\''}, // lone hamza
+	{'\u0623', '>'},  // hamza on alif
+	{'\u0625', '<'},  // hamza below alif
+	{'\u0624', '&'},  // hamza on wa
+	{'\u0626', '}'},  // hamza on ya
 
-	ch{'\u0622', '|'}, // madda on alif
-	ch{'\u0671', '{'}, // alif al-wasla
-	ch{'\u0670', '`'}, // dagger alif
-	ch{'\u0649', 'Y'}, // alif maqsura
+	{'\u0622', '|'}, // madda on alif
+	{'\u0671', '{'}, // alif al-wasla
+	{'\u0670', '`'}, // dagger alif
+	{'\u0649', 'Y'}, // alif maqsura
 
 	// Arabic-indic digits
-	ch{'\u0660', '0'},
-	ch{'\u0661', '1'},
-	ch{'\u0662', '2'},
-	ch{'\u0663', '3'},
-	ch{'\u0664', '4'},
-	ch{'\u0665', '5'},
-	ch{'\u0666', '6'},
-	ch{'\u0667', '7'},
-	ch{'\u0668', '8'},
-	ch{'\u0669', '9'},
+	{'\u0660', '0'},
+	{'\u0661', '1'},
+	{'\u0662', '2'},
+	{'\u0663', '3'},
+	{'\u0664', '4'},
+	{'\u0665', '5'},
+	{'\u0666', '6'},
+	{'\u0667', '7'},
+	{'\u0668', '8'},
+	{'\u0669', '9'},
 
 	// punctuation
-	ch{'\u060C', ','},
-	ch{'\u061B', ';'},
-	ch{'\u061F', '?'},
+	{'\u060C', ','},
+	{'\u061B', ';'},
+	{'\u061F', '?'},
 
 	// http://www.qamus.org/transliteration.htm
-	ch{'\u067e', 'P'}, // peh
-	ch{'\u0686', 'J'}, // tcheh
-	ch{'\u06a4', 'V'}, // veh
-	ch{'\u06af', 'G'}, // gaf
+	{'\u067e', 'P'}, // peh
+	{'\u0686', 'J'}, // tcheh
+	{'\u06a4', 'V'}, // veh
+	{'\u06af', 'G'}, // gaf
 	//ch{'\u0640', '_'}, // tatweel
 
 }
