@@ -50,7 +50,7 @@ EI (2012)
 References:
   * https://en.wikipedia.org/wiki/Romanization_of_Persian
 
-### Greek to Latin
+### Greek
 
 Simplified version of ALA-LC [3]
 
@@ -61,7 +61,7 @@ References:
    * https://en.wikipedia.org/wiki/Romanization_of_Greek#Modern_Greek
 
 
-### Russian to Latin
+### Russian
 
 A simplified version of the 'Road signs' system.
 
@@ -74,7 +74,7 @@ References:
 * https://en.wikipedia.org/wiki/Romanization_of_Russian
 * https://tt.se/tt-spraket/ord-och-begrepp/internationellt/andra-sprak/ryska/
 
-### Tamil to Latin
+### Tamil
 
 ISO 15919
 
