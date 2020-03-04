@@ -70,15 +70,16 @@ var roadSigns = []pair{ // https://en.wikipedia.org/wiki/Romanization_of_Russian
 var international = roadSigns
 
 var commonChars = map[string]bool{
-	" ": true,
-	",": true,
-	".": true,
-	"?": true,
-	"!": true,
-	"–": true,
-	"-": true,
-	":": true,
-	";": true,
+	" ":      true,
+	",":      true,
+	".":      true,
+	"?":      true,
+	"!":      true,
+	"–":      true,
+	"-":      true,
+	":":      true,
+	";":      true,
+	"\u0301": true, // Combining acute accent
 }
 
 // https://tt.se/tt-spraket/ord-och-begrepp/internationellt/andra-sprak/ryska/
