@@ -63,7 +63,7 @@ References:
 
 ### Russian to Latin
 
-A simplified version of the Road signs system
+A simplified version of the 'Road signs' system (see Wikipedia link below).
 
 For Swedish style transliteration, we are using a simplified version TT's recommendations (link below).
 
