@@ -63,7 +63,7 @@ References:
 
 ### Russian to Latin
 
-A simplified version of the 'Road signs' system (see Wikipedia link below).
+A simplified version of the 'Road signs' system.
 
 For Swedish style transliteration, we are using a simplified version TT's recommendations (link below).
 
@@ -76,8 +76,10 @@ References:
 
 ### Tamil to Latin
 
+ISO 15919
+
  `translit$ tamil2lat <tamil text>`
 
-Referenes:
+References:
 * https://en.wikipedia.org/wiki/Tamil_script
 
