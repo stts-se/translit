@@ -29,7 +29,7 @@ Work in progress.
     `translit$ go install ./...`
 
 
-## Usage
+## Language versions
 
 ### Arabic Buckwalter
 
