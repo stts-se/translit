@@ -80,6 +80,8 @@ var commonChars = map[string]bool{
 	":":      true,
 	";":      true,
 	"+":      true,
+	"'":      true,
+	"\"":     true,
 	"\u0301": true, // Combining acute accent
 }
 
